@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS vinted_dz;
+CREATE DATABASE IF NOT EXISTS Bi3li;
 USE vinted_dz;
 
 -- =========================
