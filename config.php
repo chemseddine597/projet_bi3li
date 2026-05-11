@@ -6,9 +6,8 @@
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'bi3li');
-define('DB_USER', 'root');       // ← modifier selon votre serveur
-define('DB_PASS', '');           // ← modifier selon votre serveur
-define('DB_CHARSET', 'utf8mb4');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 
 define('SESSION_DURATION', 86400 * 7); // 7 jours en secondes
 
