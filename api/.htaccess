@@ -1,0 +1,9 @@
+# =============================================
+#  Bi3li — api/.htaccess
+# =============================================
+Options -Indexes
+
+# Pass Authorization header to PHP (XAMPP fix)
+RewriteEngine On
+RewriteCond %{HTTP:Authorization} .+
+RewriteRule ^ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

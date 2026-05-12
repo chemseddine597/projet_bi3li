@@ -1,0 +1,28 @@
+# =============================================
+#  Bi3li — .htaccess  (XAMPP fix)
+# =============================================
+Options -Indexes
+
+# CRITICAL FIX: Pass Authorization header to PHP on XAMPP/Apache
+# Without this RewriteRule, HTTP_AUTHORIZATION is always empty
+RewriteEngine On
+RewriteCond %{HTTP:Authorization} .+
+RewriteRule ^ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Protect sensitive files
+<FilesMatch "^(config\.php|Schema\.sql|fix_passwords\.php|data\.js)$">
+    Require all denied
+</FilesMatch>
+
+# Force UTF-8
+AddDefaultCharset UTF-8
+
+# Hide PHP errors from browser output (prevents JSON corruption)
+<IfModule mod_php.c>
+    php_flag display_errors Off
+    php_flag log_errors On
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag display_errors Off
+    php_flag log_errors On
+</IfModule>

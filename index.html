@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- تمت إضافة السطر التالي لضمان التجاوب مع الهواتف -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Market — Buy & Sell Used Items</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="logoBtn">
+        <span class="logo-icon"><img src="LOGOBI3.png" alt="Bi3li Logo" /></span>
+        <span class="logo-text"</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link" id="navHome">Home</a></li>
+        <li><a href="#categories" class="nav-link" id="navCategories">Categories</a></li>
+        <li><a href="#products" class="nav-link" id="navProducts">Products</a></li>
+        <!-- تم ربط هذا الزر بالمنصة المتقدمة -->
+        <li><a href="main.html" class="nav-link">Login Platform</a></li>
+        <li><a href="#dashboard" class="nav-cta" id="navSellBtn">Sell Now</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== MARKETPLACE VIEW ========== -->
+  <main id="marketplaceView">
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">✦ 2,400+ items available today</div>
+      <h1 class="hero-title">
+        Buy &amp; Sell<br />
+        <em>Used Items</em><br />
+        Easily
+      </h1>
+      <p class="hero-subtitle">
+        A curated second-hand marketplace for clothes, electronics,<br class="desktop-br" />
+        furniture and more — at prices that make sense.
+      </p>
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary">Start Shopping</a>
+        <a href="main.html" class="btn-ghost">List an Item →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">12k+</span><span class="stat-label">Happy Buyers</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Satisfaction</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">Free</span><span class="stat-label">To Join</span></div>
+      </div>
+    </div>
+    <div class="hero-image-area">
+      <div class="hero-card hero-card-1">
+        <div class="hc-img">👟</div>
+        <div class="hc-info">
+          <span class="hc-title">NIKE</span>
+          <span class="hc-price">48$</span>
+        </div>
+      </div>
+      <div class="hero-card hero-card-2">
+        <div class="hc-img">📱</div>
+        <div class="hc-info">
+          <span class="hc-title">iPhone 13</span>
+          <span class="hc-price">340$</span>
+        </div>
+      </div>
+      <div class="hero-card hero-card-3">
+        <div class="hc-img">🪑</div>
+        <div class="hc-info">
+          <span class="hc-title">Vintage Chair</span>
+          <span class="hc-price">75$</span>
+        </div>
+      </div>
+      <div class="hero-float-tag">🔥 Hot Deal</div>
+    </div>
+  </section>
+
+  <!-- ========== CATEGORIES ========== -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Browse by</span>
+        <h2 class="section-title">Categories</h2>
+        <p class="section-sub">Find exactly what you're looking for</p>
+      </div>
+      <div class="categories-grid" id="categoriesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS ========== -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Fresh listings</span>
+        <h2 class="section-title">Latest Items</h2>
+        <p class="section-sub">Hand-picked quality finds updated daily</p>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Items</button>
+        <button class="filter-btn" data-filter="clothes">Clothes</button>
+        <button class="filter-btn" data-filter="shoes">Shoes</button>
+        <button class="filter-btn" data-filter="electronics">Electronics</button>
+        <button class="filter-btn" data-filter="furniture">Furniture</button>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-left">
+          <span class="section-eyebrow">Get in touch</span>
+          <h2 class="section-title">Have a question?</h2>
+          <p class="contact-text">We're here to help with anything — buying, selling, or just curious about how Bi3li works.</p>
+          <div class="contact-info">
+            <div class="ci-item">
+              <span class="ci-icon">✉</span>
+              <span>contact@bi3li.com</span>
+            </div>
+            <div class="ci-item">
+              <span class="ci-icon">◎</span>
+              <span>Available 24/7
+
+              </span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email address" required />
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your message..." rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Send Message</button>
+        </form>
+      </div>
+    </div>
+    </section>
+  </main>
+
+  <!-- ========== DASHBOARD VIEW (Basic) ========== -->
+  <main id="dashboardView" style="display: none;">
+    <div class="dashboard-layout container">
+      <!-- Sidebar -->
+      <aside class="dash-sidebar">
+        <div class="dash-user">
+          <div class="dash-avatar" id="dashAvatar">🧑‍💻</div>
+          <div class="dash-user-info">
+            <h3 id="dashUserName">Demo User</h3>
+            <div class="dash-balance">Balance: <span id="dashBalance">1500$</span></div>
+          </div>
+        </div>
+        <ul class="dash-nav" id="dashNav">
+          <li><button class="dash-nav-btn active" data-tab="overview">Overview</button></li>
+          <li><button class="dash-nav-btn" data-tab="purchases">My Purchases</button></li>
+          <li><button class="dash-nav-btn" data-tab="listings">My Listings</button></li>
+          <li><button class="dash-nav-btn" data-tab="inventory">Inventory (CRUD)</button></li>
+        </ul>
+      </aside>
+
+      <!-- Content -->
+      <div class="dash-content">
+        <div class="dash-tab active" id="tab-overview">
+          <h2 class="dash-title">Store Overview</h2>
+          <div class="stats-grid" id="statsGrid"></div>
+        </div>
+        <div class="dash-tab" id="tab-purchases">
+          <h2 class="dash-title">My Purchases</h2>
+          <div class="dash-list" id="purchasesList"></div>
+        </div>
+        <div class="dash-tab" id="tab-listings">
+          <h2 class="dash-title">My Listings</h2>
+          <div class="dash-list" id="listingsList"></div>
+        </div>
+        <div class="dash-tab" id="tab-inventory">
+          <div class="dash-header-flex">
+            <h2 class="dash-title">Inventory Management</h2>
+            <button class="btn-primary btn-sm" id="addNewBtn">+ Add Product</button>
+          </div>
+          <div class="table-responsive">
+            <table class="inventory-table">
+              <thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Status</th><th>Actions</th></tr></thead>
+              <tbody id="inventoryTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-icon"><img src="" alt=""></span>
+          <span class="logo-text">Bi3li</span>
+          <p>Your curated second-hand marketplace.</p>
+        </div>
+        <div class="footer-links-group">
+          <h4>Explore</h4>
+          <a href="#home">Home</a>
+          <a href="#categories">Categories</a>
+          <a href="#products">Products</a>
+        </div>
+        <div class="footer-links-group">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-links-group">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Bi3li. Made with for buyers and sellers.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== MODALS ========== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="crudModalOverlay">
+    <div class="modal" id="crudModal">
+      <button class="modal-close" id="crudModalClose">✕</button>
+      <div class="modal-body crud-modal-body">
+        <h2 class="modal-title" id="crudModalTitle">Add New Product</h2>
+        <form class="crud-form" id="crudForm">
+          <input type="hidden" id="crudId" />
+          <div class="form-row">
+            <div class="form-group"><label>Title</label><input type="text" id="crudTitle" required /></div>
+            <div class="form-group"><label>Price ($)</label><input type="number" id="crudPrice" required step="0.01" /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Category</label><select id="crudCategory" required><option value="clothes">Clothes</option><option value="shoes">Shoes</option><option value="electronics">Electronics</option><option value="furniture">Furniture</option></select></div>
+            <div class="form-group"><label>Condition</label><input type="text" id="crudCondition" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Emoji Icon</label><input type="text" id="crudEmoji" required maxlength="4" /></div>
+            <div class="form-group"><label>Badge (Optional)</label><select id="crudBadge"><option value="">None</option><option value="new">New</option><option value="hot">Hot</option><option value="deal">Deal</option></select></div>
+          </div>
+          <div class="form-group"><label>Description</label><textarea id="crudDesc" rows="3" required></textarea></div>
+          <div class="form-actions">
+            <button type="button" class="btn-ghost" id="crudCancelBtn">Cancel</button>
+            <button type="submit" class="btn-primary">Save Product</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
